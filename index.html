@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <script src='./respond_test.js></script>
+    <script type="text/javascript">
+      function doPost(e) {
+        return ContentService.createTextOutput(JSON.parse(e.postData.contents).challenge);
+      }
+    </script>
   </head>
   <body>
     <div> Hello World! </div>
